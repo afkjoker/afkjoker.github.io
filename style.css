@@ -1,7 +1,7 @@
 :root {
-	--background-color: #151515;
+	--background-color: rgba(0, 0, 0, 0);
 	--foreground-color: rgba(0, 0, 0, 0.03);
-	--highlight-color: #404040;
+	--highlight-color: #69a0b3;
 
 	--content-color: #425359;
 	--header-color: #69a0b3;
@@ -143,12 +143,21 @@ div.post-title-date {
 
 /* globally color links */
 a {
+	text-decoration: none;
 	color: var(--link-color);
+}
+
+a:link:hover {
+	text-decoration: underline;
 }
 
 a.readmore {
 	text-decoration: none;
 	font-size: 16px;
+}
+
+a.readmore:hover {
+	text-decoration: none;
 }
 
 p.tag-container {
@@ -210,9 +219,7 @@ hr {
 	color: var(--highlight-color);
 }
 
-ul li {
-	list-style-type: "- ";
-}
+.katex { font-size: 16px; }
 
 pre.code {
 	background-color: var(--background-color);
