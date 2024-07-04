@@ -1,13 +1,13 @@
 :root {
 	--background-color: #151515;
-	--foreground-color: #202020;
+	--foreground-color: rgba(0, 0, 0, 0.03);
 	--highlight-color: #404040;
 
-	--content-color: #A0B0C0;
-	--header-color: #A0A0C0;
+	--content-color: #425359;
+	--header-color: #69a0b3;
 	--code-color: #A0C0A0;
-	--link-color: #A0C0B0;
-	--bold-color: #D0A070;
+	--link-color: #5e428c;
+	--bold-color: #245b6e;
 }
 
 /* force overflow to post-outer only */
@@ -18,15 +18,17 @@ html, body {
 }
 
 /* global font */
-body {
-	background-color: var(--background-color);
+html {
+	background-image: url("assets/76c520e1c79f34b36e4ed6a054b2ea8e.jpg");
+	background-size: cover; background-attachment:fixed; height:100%;
+}
 
-	font-family: "Noto Sans Mono", monospace;
+body {
+	font-family:  "EB Garamond", serif; font-size:14pt;
 	font-variation-settings: "wdth" 100;
 	font-optical-sizing: auto;
 	font-weight: <weight>;
 	font-style: normal;
-	font-size: 14px;
 }
 
 /* main content, centered, does not exceed specified width */
@@ -47,6 +49,7 @@ div#title-outer {
 
 div#title-inner {
 	background-color: var(--foreground-color);
+	backdrop-filter: blur(10px);
 	text-align: center;
 	padding: 3px;
 }
@@ -60,7 +63,7 @@ div#title-inner > a {
 	margin-bottom: 0.83em;
 	margin-top: 0.83em;
 	font-weight: bold;
-	font-size: 1.5em;
+	font-size: 1.7em;
 }
 
 /* contain overflow entirely within posts-outer */
@@ -102,13 +105,14 @@ div.post-spacer {
 
 div.post {
 	background-color: var(--foreground-color);
+	backdrop-filter: blur(10px);
 	padding: 3px;
 }
 
 div.content {
 	color: var(--content-color);
-	margin-right: 10px;
-	margin-left: 10px;
+	margin-right: 20px;
+	margin-left: 20px;
 }
 
 /* horizontal flexbox title - name & timestamp */
@@ -121,19 +125,19 @@ a.post-title-name {
 	color: var(--header-color);
 	text-decoration: none;
 	font-weight: bold;
-	font-size: 1.17em;
+	font-size: 1.3em;
 
 	margin-bottom: 5px;
 	margin-top: 1em;
 }
 
 div.post-title-date {
-	margin-bottom: 0px;
+	margin-bottom: 7px;
 	text-align: right;
 	margin-right: 0px;
 	margin-left: auto;
 	margin-top: auto;
-	font-size: 12px;
+	font-size: 14px;
 	width: auto;
 }
 
@@ -144,11 +148,11 @@ a {
 
 a.readmore {
 	text-decoration: none;
-	font-size: 12px;
+	font-size: 16px;
 }
 
 p.tag-container {
-	font-size: 12px;
+	font-size: 16px;
 }
 
 div#starship {
@@ -175,11 +179,13 @@ div#starship {
 	padding-top: 4px;
 
 	transform: translateX(calc(-100% + 26px));
+	opacity: 25%;
 	transition: 1s;
 }
 
 div#starship:hover {
 	transform: translateX(10px);
+	opacity: 100%;
 }
 
 div#grabber {

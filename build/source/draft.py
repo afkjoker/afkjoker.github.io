@@ -14,7 +14,7 @@ def draft(content, pageid):
 
     tags = set()
 
-    form_date = datetime.datetime.now().strftime("%b&nbsp;%-d&nbsp;%Y<br>%-I:%M&nbsp;%p")
+    form_date = datetime.datetime.now().strftime("%b&nbsp;%-d&nbsp;%Y<br>%-I:%M&nbsp;%p&nbsp;EST")
 
     for ln in content.split('\n'):
         line = ln + '\n'
