@@ -58,7 +58,7 @@ div#title-inner {
 div#title-inner > a {
 	text-decoration: none;
 	display: block;
-
+	text-shadow: 0 0 10px var(--header-color);
 	color: var(--header-color);
 	margin-bottom: 0.83em;
 	margin-top: 0.83em;
